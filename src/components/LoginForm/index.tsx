@@ -1,13 +1,14 @@
 import React from "react";
+import { Text } from "react-native";
 import Icon from "react-native-vector-icons/AntDesign";
-import { Container, InputContainer, StyledInput } from "./styles";
+import { Container, InputContainer, LoginButton, StyledInput, TextButton } from "./styles";
 
 export function LoginForm() {
   return (
     <Container>
       <InputContainer>
         <Icon
-          style={{ position: "absolute", left: 25, zIndex: 1 }}
+          style={{ position: "absolute", left: 20, zIndex: 1 }}
           name='mail'
           size={25}
           color='#722e8f'
@@ -17,13 +18,17 @@ export function LoginForm() {
 
       <InputContainer>
         <Icon
-          style={{ position: "absolute", left: 25, zIndex: 1 }}
+          style={{ position: "absolute", left: 20, zIndex: 1 }}
           name='lock'
           size={25}
           color='#722e8f'
         />
         <StyledInput placeholder='Senha' />
       </InputContainer>
+
+      <LoginButton>
+        <TextButton>ENTRAR</TextButton>
+      </LoginButton>
     </Container>
   );
 }
